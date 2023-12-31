@@ -34,3 +34,50 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# FACEBOOK Messenger Clone project
+
+## Description
+
+Facebook Messenger Clone App that allows for real time messessing
+
+## Technologies Used
+
+## Next.js 13
+
+- Utilizing app router for efficient routing and dynamic page render
+
+## React.js
+
+- reusable components used as backbone of dynamic app
+
+## Tailwindcss / headless UI
+
+- allows creation of sleek UI with seemless user experience
+
+## Prisma / MongoDB
+
+- allows for efficient and scalable database solution to handle multiple users
+
+## NextAuth
+
+- Handles security and authentication for user accounts. Allows
+
+## Pusher
+
+- allows for real time messaging and notification
+
+## Cloudinary
+
+- Handles Image Uploading
+
+## Vercal
+
+- Hosting (Look into how to host on Docker)
+
+## Notes for self:
+
+1. app folder contains all the files of each page
+2. (index) in the app folder indicates that this is the index page/main route
+3. src for all file is relative the app folder so if you want app/images/logo.png do /images/logo.png
+4. "use client"; on top of each component that is interactive and DO NOT WANT to be client side
