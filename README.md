@@ -81,3 +81,9 @@ Facebook Messenger Clone App that allows for real time messessing
 2. (index) in the app folder indicates that this is the index page/main route
 3. src for all file is relative the app folder so if you want app/images/logo.png do /images/logo.png
 4. "use client"; on top of each component that is interactive and DO NOT WANT to be client side
+5. For the MongoDB prisma set up
+   a. npm install -D prisma installs dependences
+   b. npx prisma init
+   c. npx prisma db push (pushes schema to online cluster)
+   d. npm install next-auth@latest @prisma/client @next-auth/prisma-adapter bcrypt (dependences for next authentication)
+   e. npm install -D @types/bcrypt
