@@ -1,7 +1,7 @@
 "use client";
 
 import axios from "axios";
-import { use, useCallback, useState } from "react";
+import { use, useCallback, useEffect, useState } from "react";
 import { FieldValues, useForm, SubmitHandler } from "react-hook-form";
 import { BsGithub, BsGoogle } from "react-icons/bs";
 
@@ -10,15 +10,26 @@ import Input from "../../components/inputs/Input";
 import Button from "@/app/components/Button";
 import AuthSocialButton from "./AuthSocialButton";
 import { toast } from "react-hot-toast";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 type Variant = "LOGIN" | "REGISTER";
 
 export default function AuthForm() {
+  const session = useSession();
+  const router = useRouter();
+
   const [variant, setVariant] = useState<Variant>("LOGIN");
 
-  // used to disable buttons after submitting logging form
+  // enable disable form buttons and parameters after successful submit
   const [isLoading, setisLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (session?.status == "authenticated") {
+      console.log("authenticated user");
+      router.push("/users");
+    }
+  }, [session?.status, router]);
 
   const toggleVariant = useCallback(() => {
     if (variant === "LOGIN") {
@@ -51,7 +62,10 @@ export default function AuthForm() {
       axios
         .post("/api/register", data)
         .then((response) => {
+          // sign in after regristration
+          signIn("credentials", data);
           toast.success("Successfully registered");
+          router.push("/users");
         })
         .catch((error) => {
           console.log("registration error, ", error);
@@ -75,6 +89,7 @@ export default function AuthForm() {
 
           if (callback?.ok) {
             toast.success("Successfully logged in");
+            router.push("/users");
           }
         })
         .finally(() => {
