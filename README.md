@@ -87,3 +87,6 @@ Facebook Messenger Clone App that allows for real time messessing
    c. npx prisma db push (pushes schema to online cluster)
    d. npm install next-auth@latest @prisma/client @next-auth/prisma-adapter bcrypt (dependences for next authentication)
    e. npm install -D @types/bcrypt
+6. for routes and api paths in next.js create an api folder, the folders to represent the path
+   a. api/auth/route.js|ts == /api/auth website path (request header) (ROUTE HANDLERS)
+   b. api/auth/[route name]/route.ts == dynamic route/path where [] is the dynamic part
