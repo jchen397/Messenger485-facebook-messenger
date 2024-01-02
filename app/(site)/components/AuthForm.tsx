@@ -9,6 +9,8 @@ import Input from "../../components/inputs/Input";
 // import Input from "@/app/components/inputs/Input"; (uses alias)
 import Button from "@/app/components/Button";
 import AuthSocialButton from "./AuthSocialButton";
+import { toast } from "react-hot-toast";
+import { signIn } from "next-auth/react";
 
 type Variant = "LOGIN" | "REGISTER";
 
@@ -46,16 +48,57 @@ export default function AuthForm() {
 
     if (variant === "REGISTER") {
       //axios register
-      axios.post("/api/register", data);
+      axios
+        .post("/api/register", data)
+        .then((response) => {
+          toast.success("Successfully registered");
+        })
+        .catch((error) => {
+          console.log("registration error, ", error);
+          toast.error("Something went wrong with registration");
+        })
+        .finally(() => {
+          setisLoading(false);
+        });
     }
 
     if (variant === "LOGIN") {
       // nextauth sign in
+      signIn("credentials", {
+        ...data,
+        redirect: false,
+      })
+        .then((callback) => {
+          if (callback?.error) {
+            toast.error("Invalid credentials");
+          }
+
+          if (callback?.ok) {
+            toast.success("Successfully logged in");
+          }
+        })
+        .finally(() => {
+          setisLoading(false);
+        });
     }
   };
 
   const socialAction = (action: string) => {
-    setisLoading(true);
+    setisLoading(true); // disables form buttons
+
+    signIn(action, { redirect: false })
+      .then((callback) => {
+        if (callback?.error) {
+          toast.error("Invalid credentials");
+        }
+
+        if (callback?.ok && !callback?.error) {
+          toast.success("Successfully logged in");
+        }
+      })
+      .finally(() => {
+        setisLoading(false);
+      });
   };
 
   return (
