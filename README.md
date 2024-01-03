@@ -90,3 +90,4 @@ Facebook Messenger Clone App that allows for real time messessing
 6. for routes and api paths in next.js create an api folder, the folders to represent the path
    a. api/auth/route.js|ts == /api/auth website path (request header) (ROUTE HANDLERS)
    b. api/auth/[route name]/route.ts == dynamic route/path where [] is the dynamic part
+7. useRoutes hook because we want to dynamically change the active status dependent on if the user is openin a conversation or not
