@@ -12,6 +12,7 @@ const useConversation = () => {
     return params.conversationId as string;
   }, [params?.conversationId]);
 
+  // !! turns string into boolean
   const isOpen = useMemo(() => !!conversationId, [conversationId]);
 
   return useMemo(
