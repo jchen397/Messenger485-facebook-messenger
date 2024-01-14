@@ -6,14 +6,15 @@ import { useSession } from "next-auth/react";
 import { useEffect, useMemo, useState } from "react";
 import { MdOutlineGroupAdd } from "react-icons/md";
 import clsx from "clsx";
-import { find, uniq } from "lodash";
+// import { find, uniq } from "lodash";
 
-import useConversation from "@/app/hooks/useConversation";
-import { pusherClient } from "@/app/libs/pusher";
-import GroupChatModal from "@/app/components/modals/GroupChatModal";
+// import useConversation from "@/app/hooks/useConversation";
+// import { pusherClient } from "@/app/libs/pusher";
+// import GroupChatModal from "@/app/components/modals/GroupChatModal";
 import ConversationBox from "./ConversationBox";
-import { FullConversationType } from "@/app/types";
+// import { FullConversationType } from "@/app/types";
 
+// "establishing class"
 interface ConversationListProps {
   initialItems: FullConversationType[];
   users: User[];
@@ -30,7 +31,7 @@ const ConversationList: React.FC<ConversationListProps> = ({
   const router = useRouter();
   const session = useSession();
 
-  const { conversationId, isOpen } = useConversation(); // caches the current conversations?
+  const { conversationId, isOpen } = useConversation();
 
   const pusherKey = useMemo(() => {
     return session.data?.user?.email;
