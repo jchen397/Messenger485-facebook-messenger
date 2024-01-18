@@ -22,8 +22,7 @@ yarn dev
 pnpm dev
 # or
 bun dev
-
-
+```
 
 ## Description
 
@@ -31,7 +30,7 @@ Facebook Messenger Clone App that allows for real time messessing
 
 ## Technologies Used
 
-'''
+```
 
 ## Next.js 13
 
