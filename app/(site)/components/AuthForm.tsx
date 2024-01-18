@@ -232,8 +232,6 @@ export default function AuthForm() {
           </div>
         </div>
       </div>
-      Authentication Form2!
-      <p>testing</p>
     </div>
   );
 }

@@ -8,7 +8,7 @@ import { MdOutlineGroupAdd } from "react-icons/md";
 import clsx from "clsx";
 // import { find, uniq } from "lodash";
 
-// import useConversation from "@/app/hooks/useConversation";
+import useConversation from "@/app/hooks/useConversation";
 // import { pusherClient } from "@/app/libs/pusher";
 // import GroupChatModal from "@/app/components/modals/GroupChatModal";
 import ConversationBox from "./ConversationBox";
@@ -82,11 +82,11 @@ const ConversationList: React.FC<ConversationListProps> = ({
 
   return (
     <>
-      <GroupChatModal
+      {/* <GroupChatModal
         users={users}
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-      />
+      /> */}
       <aside
         className={clsx(
           `
