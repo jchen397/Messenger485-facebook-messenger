@@ -26,7 +26,11 @@ bun dev
 
 ## Description
 
-Facebook Messenger Clone App that allows for real time messessing
+- Facebook Messenger Clone App that allows for real time messessing.
+
+- Utilized Next.js 14, React, and Tailwind to create a clone of Messenger that allows for real time messaging between users with Pusher. User’s account credentials authentication is managed by NextAuth, with Google and Github account integrations. Unit testing covered by Jest.
+
+- Applied Prisma and MongoDB to allow users to create and manage accounts capable of viewing online status, real time message other users, marking messages seen, and creating group chats.
 
 ## Technologies Used
 
