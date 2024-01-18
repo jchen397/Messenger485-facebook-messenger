@@ -32,35 +32,35 @@ Facebook Messenger Clone App that allows for real time messessing
 
 ```
 
-## Next.js 13
+1. Next.js 14
 
 - Utilizing app router for efficient routing and dynamic page render
 
-## React.js
+2. React.js
 
 - reusable components used as backbone of dynamic app
 
-## Tailwindcss / headless UI
+3. Tailwindcss / headless UI
 
 - allows creation of sleek UI with seemless user experience
 
-## Prisma / MongoDB
+4. Prisma / MongoDB
 
 - allows for efficient and scalable database solution to handle multiple users
 
-## NextAuth
+5. NextAuth
 
 - Handles security and authentication for user accounts. Allows
 
-## Pusher
+6. Pusher
 
 - allows for real time messaging and notification
 
-## Cloudinary
+7. Cloudinary
 
 - Handles Image Uploading
 
-## Vercal
+8. Vercal
 
 - Hosting (Look into how to host on Docker)
 
