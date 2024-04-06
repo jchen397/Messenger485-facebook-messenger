@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 # DEMO IMAGES: 
 - Logging Screen: 
-![alt text] (https://github.com/jchen397/Messenger485-facebook-messenger/blob/main/sample_images/logging_screen.png)
+![alt text] (https://github.com/jchen397/Messenger485-facebook-messenger/blob/main/sample_images/logging_screen.png?raw=true)
 
 ### Install packages
 
