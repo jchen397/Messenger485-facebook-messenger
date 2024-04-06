@@ -2,6 +2,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 # FACEBOOK Messenger Clone project
 
+# DEMO IMAGES: 
+- Logging Screen: 
+![alt text] (https://github.com/jchen397/Messenger485-facebook-messenger/blob/main/sample_images/logging_screen.png)
+
 ### Install packages
 
 ```shell
